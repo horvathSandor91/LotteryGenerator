@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lottery.LotteryViewController">
+    <children>
+      <Pane id="basePane" fx:id="basePane" prefHeight="400.0" prefWidth="500.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6b8cab" height="415.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" width="515.0" />
+            <HBox layoutX="84.0" layoutY="87.0" spacing="40.0">
+               <children>
+                  <TextField id="input1" fx:id="input1" layoutX="39.0" layoutY="69.0" prefHeight="20.0" prefWidth="36.0" />
+                  <TextField id="input2" fx:id="input2" layoutX="90.0" layoutY="69.0" prefHeight="20.0" prefWidth="36.0" />
+                  <TextField id="input3" fx:id="input3" layoutX="143.0" layoutY="69.0" prefHeight="20.0" prefWidth="36.0" />
+                  <TextField id="input4" fx:id="input4" layoutX="195.0" layoutY="69.0" prefHeight="20.0" prefWidth="36.0" />
+                  <TextField id="input5" fx:id="input5" layoutX="249.0" layoutY="69.0" prefHeight="20.0" prefWidth="36.0" />
+               </children>
+            </HBox>
+              <Button fx:id="button" layoutX="200.0" layoutY="325.0" onAction="#handleButtonAction" text="Sorsolás!" textFill="#b22525">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Text layoutX="155.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Írj be 5 számot 1 és 90 között!" />
+            <Text layoutX="211.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOTTÓ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER" layoutX="100.0" layoutY="161.0" spacing="60.0">
+               <children>
+                  <Label id="label1" fx:id="label1" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="110.0" textAlignment="CENTER" />
+                  <Label id="label2" fx:id="label2" contentDisplay="CENTER" layoutX="91.0" layoutY="110.0" textAlignment="CENTER" />
+                  <Label id="label3" fx:id="label3" contentDisplay="CENTER" layoutX="143.0" layoutY="110.0" textAlignment="CENTER" />
+                  <Label id="label4" fx:id="label4" contentDisplay="CENTER" layoutX="196.0" layoutY="110.0" textAlignment="CENTER" />
+                  <Label id="label5" fx:id="label5" contentDisplay="CENTER" layoutX="250.0" layoutY="110.0" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <Label id="resultLabel" fx:id="resultLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="215.0" prefHeight="22.0" prefWidth="479.0" textFill="#a10e0e" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="MS Outlook" size="18.0" />
+               </font></Label>
+            <Text fill="#1b1414" layoutX="192.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sorsolt számok:" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+          </children>
+      </Pane>
+      <Pane id="alertPane" fx:id="alertPane" prefHeight="400.0" prefWidth="500.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#b7c7d7" height="200.0" layoutX="117.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" width="273.0" />
+            <Label id="alertText" fx:id="alertText" alignment="CENTER" contentDisplay="CENTER" layoutX="133.0" layoutY="100.0" prefHeight="137.0" prefWidth="234.0" textAlignment="CENTER" textFill="#7c707b" wrapText="true">
+               <font>
+                  <Font name="MT Extra" size="15.0" />
+               </font></Label>
+            <Button id="alertButton" fx:id="alertButton" layoutX="240.0" layoutY="217.0" mnemonicParsing="false" onAction="#handleAlertButton" text="OK" />
+         </children>
+      </Pane>
+    </children>
+   <effect>
+      <Blend>
+         <topInput>
+            <Blend />
+         </topInput>
+      </Blend>
+   </effect>
+</AnchorPane>
