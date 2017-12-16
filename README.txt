@@ -1,0 +1,2 @@
+# LotteryGenerator
+Java FX alap
